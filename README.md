@@ -1,3 +1,67 @@
+# 📝 ToDoList App
+
+A simple and minimal ToDo List application built with **ReactJS** and **Vite**, designed to help you track tasks efficiently.
+
+---
+
+## 🚀 Features
+
+- ✅ Add new tasks
+- 🗑️ Delete completed or unwanted tasks
+- 🎨 Styled using CSS (custom or Tailwind)
+- ⚛️ Built using React functional components and hooks
+
+---
+
+## 📁 Folder Structure
+todolist/
+├── public/
+├── src/
+│ ├── App.jsx
+│ ├── index.css
+│ └── main.jsx
+├── .gitignore
+├── index.html
+├── package.json
+├── vite.config.js
+└── README.md
+
+---
+
+## 🛠️ Tech Stack
+
+- [ReactJS](https://reactjs.org/)
+- [Vite](https://vitejs.dev/)
+- JavaScript (ES6+)
+- CSS
+
+---
+## 📦 Installation & Usage
+
+```bash
+# Clone the repo
+git clone https://github.com/piyushmakhijaa/ToDoList.git
+
+# Navigate to the project directory
+cd ToDoList
+
+# Install dependencies
+npm install
+
+# Run the app locally
+npm run dev
+
+
+
+
+
+
+
+
+
+
+
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
