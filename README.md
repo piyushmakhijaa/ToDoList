@@ -53,11 +53,7 @@ npm install
 # Run the app locally
 npm run dev
 
-# Some Snapshots of the project
-<img width="1892" height="922" alt="todolist-1" src="https://github.com/user-attachments/assets/8c062d7c-1d53-4b53-b575-6b03d3698c2a" />
-
-<img width="1879" height="916" alt="todolist-2" src="https://github.com/user-attachments/assets/6ad4b2b1-38d5-4129-be81-f000f31f22dc" />
-
+---
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
