@@ -14,18 +14,20 @@ A simple and minimal ToDo List application built with **ReactJS** and **Vite**, 
 ---
 
 ## 📁 Folder Structure
+
+```
 todolist/
 ├── public/
 ├── src/
-│ ├── App.jsx
-│ ├── index.css
-│ └── main.jsx
+│   ├── App.jsx
+│   ├── index.css
+│   └── main.jsx
 ├── .gitignore
 ├── index.html
 ├── package.json
 ├── vite.config.js
 └── README.md
-
+```
 ---
 
 ## 🛠️ Tech Stack
@@ -50,16 +52,6 @@ npm install
 
 # Run the app locally
 npm run dev
-
-
-
-
-
-
-
-
-
-
 
 
 # React + Vite
