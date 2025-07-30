@@ -1,0 +1,342 @@
+/* ===== Complete CSS with Dark Beige + All Transitions Preserved ===== */
+
+/* ===== Global layout & typography ===== */
+body {
+  background: linear-gradient(135deg, #f3e7df 0%, #eee1d5 50%, #e9dbc9 100%);
+  min-height: 70vh;
+  padding: 1rem;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #594a5c; /* richer muted plum-brown */
+  font-family: "Architects Daughter", cursive;
+  text-align: center;
+  font-size: 125%;
+  line-height: 1.6;
+  /* Page-load fade-in */
+  opacity: 0;
+  animation: bodyFade 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.3s forwards;
+}
+
+/* ===== Card container ===== */
+.container {
+  width: 100%;
+  max-width: 500px;
+  min-width: 250px;
+  min-height: 500px;
+  /* DARKER BACKGROUND TO FIX BLENDING */
+  background: linear-gradient(145deg, #f4ece5 0%, #e0d1c3 100%);
+  /* DARKER DOT PATTERN */
+  background-image: radial-gradient(#cbb3a0 8%, transparent 0),
+    radial-gradient(#d9c2ae 8%, transparent 0);
+  background-size: 28px 28px;
+  background-position: 0 0, 14px 14px;
+  border-radius: 24px;
+  /* STRONGER BORDER FOR SEPARATION */
+  border: 1px solid rgba(169, 140, 118, 0.55);
+  /* ENHANCED SHADOWS */
+  box-shadow: 0 10px 32px rgba(89, 74, 92, 0.18),
+    0 6px 18px rgba(89, 74, 92, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.85);
+  padding: 2.5rem 2rem;
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+  /* ALL ORIGINAL TRANSITIONS PRESERVED */
+  transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    box-shadow 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), border-color 0.3s ease;
+}
+
+.container::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(
+    circle,
+    rgba(224, 209, 196, 0.12) 0%,
+    transparent 70%
+  );
+  transition: opacity 0.6s ease;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.container:hover {
+  transform: translateY(-6px) scale(1.01);
+  /* ENHANCED HOVER SHADOWS */
+  box-shadow: 0 18px 56px rgba(89, 74, 92, 0.22),
+    0 10px 28px rgba(89, 74, 92, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.95);
+  border-color: rgba(169, 140, 118, 0.75);
+}
+
+.container:hover::before {
+  opacity: 1;
+}
+
+/* ===== Heading ===== */
+.heading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.heading h1 {
+  transform: rotate(1.2deg);
+  padding: 0.5rem 1.8rem;
+  border-radius: 28% 8% 25% 10% / 12% 28% 32% 20%;
+  background: linear-gradient(135deg, #e8d2bd 0%, #d9c0ab 100%);
+  color: #594a5c;
+  font-size: 1.8rem;
+  letter-spacing: 0.03em;
+  box-shadow: 0 4px 12px rgba(89, 74, 92, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.7);
+  position: relative;
+  /* ALL HEADING TRANSITIONS PRESERVED */
+  transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1),
+    box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.heading h1::after {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(
+    135deg,
+    rgba(232, 210, 189, 0.35),
+    rgba(217, 192, 171, 0.35)
+  );
+  border-radius: 30% 10% 27% 12% / 14% 30% 34% 22%;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.heading h1:hover {
+  transform: rotate(0deg) scale(1.05);
+  background: linear-gradient(135deg, #ecd7c2 0%, #dec3ae 100%);
+  box-shadow: 0 6px 20px rgba(89, 74, 92, 0.15),
+    inset 0 2px 0 rgba(255, 255, 255, 0.8);
+}
+
+.heading h1:hover::after {
+  opacity: 1;
+}
+
+/* ===== Form elements ===== */
+.form input {
+  width: 75%;
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.92),
+    rgba(245, 236, 230, 0.75)
+  );
+  padding: 0.8rem 0.8rem;
+  margin-bottom: 1.5rem;
+  border: 2px solid #d9c6b6;
+  border-left-color: #c6af9c;
+  border-radius: 0 0 16px 16px;
+  font-family: inherit;
+  font-size: 1rem;
+  color: #594a5c;
+  position: relative;
+  /* ALL INPUT TRANSITIONS PRESERVED */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, background 0.3s ease,
+    transform 0.2s ease;
+}
+
+.form input:focus {
+  outline: none;
+  border-color: #b39883;
+  box-shadow: 0 0 0 4px rgba(179, 152, 131, 0.25),
+    0 4px 12px rgba(89, 74, 92, 0.06);
+  background: linear-gradient(145deg, #ffffff, rgba(245, 236, 230, 0.85));
+  transform: translateY(-1px);
+}
+
+.form input::placeholder {
+  color: rgba(89, 74, 92, 0.5);
+  transition: color 0.3s ease;
+}
+
+.form input:focus::placeholder {
+  color: rgba(89, 74, 92, 0.35);
+}
+
+/* ===== Buttons ===== */
+button {
+  border: none;
+  background: none;
+  font-family: inherit;
+  cursor: pointer;
+  position: relative;
+}
+
+button span {
+  display: block;
+  padding: 0.7rem 1.5rem;
+  border-radius: 14px;
+  background: linear-gradient(145deg, #f5eee7 0%, #eaddcf 100%);
+  border: 2px solid #c6af9c;
+  color: #594a5c;
+  position: relative;
+  overflow: hidden;
+  /* ALL BUTTON TRANSITIONS PRESERVED */
+  transition: background 0.3s ease,
+    transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease,
+    color 0.3s ease, border-color 0.3s ease;
+}
+
+button span::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(235, 214, 199, 0.45) 0%,
+    transparent 70%
+  );
+  transition: width 0.6s ease, height 0.6s ease;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+}
+
+button span:hover {
+  background: linear-gradient(145deg, #f7f1ea 0%, #ead8ca 100%);
+  box-shadow: 0 4px 16px rgba(89, 74, 92, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.85);
+  transform: translateY(-3px) scale(1.02);
+  color: #483a4a;
+  border-color: #b39883;
+}
+
+button span:hover::before {
+  width: 300px;
+  height: 300px;
+}
+
+button span:active {
+  transform: translateY(-1px) scale(1.01);
+  box-shadow: 0 2px 8px rgba(89, 74, 92, 0.09);
+}
+
+/* ===== List items ===== */
+li {
+  position: relative;
+  text-align: left;
+  padding: 0.8rem 0.8rem 0.8rem 2.5rem;
+  margin-bottom: 0.6rem;
+  list-style: none;
+  border-radius: 12px;
+  /* ENHANCED LIST BACKGROUND TO STAND OUT FROM CONTAINER */
+  background: linear-gradient(145deg, #efe4d6 0%, #ddcbb9 100%);
+  border-left: 5px solid #bfa18b;
+  color: #4f4251; /* slightly darker text */
+  box-shadow: 0 3px 10px rgba(89, 74, 92, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.7);
+  /* ALL LIST TRANSITIONS PRESERVED */
+  transition: background 0.3s ease,
+    transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease,
+    border-left-color 0.3s ease;
+}
+
+li:hover {
+  background: linear-gradient(145deg, #f8eee3 0%, #e9d9c6 100%);
+  transform: translateX(8px) scale(1.01);
+  box-shadow: 0 5px 16px rgba(89, 74, 92, 0.17),
+    inset 0 2px 0 rgba(255, 255, 255, 0.8);
+  border-left-color: #a28572;
+}
+
+/* decorative pastel bullet with animation */
+li::before {
+  content: "";
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0.6rem;
+  height: 0.6rem;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #bfa18b 0%, #aa8d7a 100%);
+  box-shadow: 0 1px 3px rgba(89, 74, 92, 0.25);
+  /* ALL BULLET TRANSITIONS PRESERVED */
+  transition: background 0.3s ease,
+    transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease;
+}
+
+li:hover::before {
+  background: linear-gradient(135deg, #a28572 0%, #957666 100%);
+  transform: translateY(-50%) scale(1.2);
+  box-shadow: 0 2px 6px rgba(89, 74, 92, 0.3);
+}
+
+/* ===== Additional elegant touches ===== */
+.container > * {
+  animation: slideInUp 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.heading {
+  animation-delay: 0.2s;
+}
+.form {
+  animation-delay: 0.4s;
+}
+li:nth-child(1) {
+  animation-delay: 0.6s;
+}
+li:nth-child(2) {
+  animation-delay: 0.7s;
+}
+li:nth-child(3) {
+  animation-delay: 0.8s;
+}
+li:nth-child(4) {
+  animation-delay: 0.9s;
+}
+
+/* ===== Keyframes ===== */
+@keyframes bodyFade {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== Responsive refinements ===== */
+@media (max-width: 600px) {
+  .container {
+    padding: 1.5rem 1rem;
+    margin: 0.5rem;
+  }
+
+  .heading h1 {
+    font-size: 1.5rem;
+    padding: 0.4rem 1.2rem;
+  }
+}
+
+/* ===== Subtle focus ring for accessibility ===== */
+*:focus {
+  outline: 2px solid rgba(179, 152, 131, 0.4);
+  outline-offset: 2px;
+}
